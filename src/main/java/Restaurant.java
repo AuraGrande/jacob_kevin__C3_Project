@@ -66,4 +66,15 @@ public class Restaurant {
         return name;
     }
 
+    //Ideally this method will be implemented as an action listener that passes all checked items when a single item is checked
+    //So to implement something similar a list of all item names is passed instead
+    public int calculate_Total(ArrayList<String> selected_Items){
+        int totalCost = 0;
+        if(selected_Items.size() == 0) return 0;
+        for(String itemTempObject: selected_Items)
+            if(findItemByName(itemTempObject).getName().equals(itemTempObject)){
+                totalCost += findItemByName(itemTempObject).getPrice();
+            }
+        return totalCost;
+    }
 }

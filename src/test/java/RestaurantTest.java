@@ -81,9 +81,15 @@ class RestaurantTest {
     @Test
     public void get_the_total_cost_of_items_selected_by_the_user() {
         //Create a string list and add the name of the items
-        //Check if the total cost of a single item is it's price
+        ArrayList<String> itemNames = new ArrayList<>();
         //Make sure no items returns zero
+        assertEquals(0, restaurant.calculate_Total(itemNames));
+        //Check if the total cost of a single item is it's price
+        itemNames.add("Sweet corn soup");
+        assertEquals(119, restaurant.calculate_Total(itemNames));
         //Check if total is calculated properly
+        itemNames.add("Vegetable lasagne");
+        assertEquals((119+269), restaurant.calculate_Total(itemNames));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<COMPUTE COST>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
