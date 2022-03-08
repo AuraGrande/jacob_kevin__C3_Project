@@ -76,4 +76,14 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    //<<<<<<<<<<<<<<<<<<<<<<<COMPUTE COST>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void get_the_total_cost_of_items_selected_by_the_user() {
+        //Create a string list and add the name of the items
+        //Check if the total cost of a single item is it's price
+        //Make sure no items returns zero
+        //Check if total is calculated properly
+    }
+    //<<<<<<<<<<<<<<<<<<<<<<<COMPUTE COST>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
